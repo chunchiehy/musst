@@ -2,6 +2,7 @@
 Code for the paper:
 [Multi-span Style Extraction for Generative Reading Comprehension](https://arxiv.org/abs/2009.07382)  
 Junjie Yang, Zhuosheng Zhang, Hai Zhao
+![framework](framework.png)
 
 ## Dependencies
 The code was tested in `python3.7`.
@@ -9,11 +10,6 @@ Install the required packages:
 ```bash
 pip install -r requirements.txt
 ```
-
-## Passage ranker
-Train the passage ranker:
-
-
 
 ## Syntactic multi-span answer annotator
 Start Stanford CoreNLP Parser server:
@@ -58,11 +54,12 @@ python main.py \
     --task_name=nlg \
     --seed=1996
 ```
+
 Evaluate on dev set:
-# Eval in dev with single ranker
+```
 python main.py \
     --model_name_or_path=${expr_dir} \
-    --output_dir=${expr_dir}/dev_single_ranker  \
+    --output_dir=${expr_dir}  \
     --do_eval \
     --data_dir=${data_dir}  \
     --eval_file=dev_from_self_ranker.jsonl \
@@ -71,6 +68,6 @@ python main.py \
     --max_num_spans=9\
     --reference_file=dev_ref.json \
     --task_name=nlg
-
+```
 ## License 
 MIT
