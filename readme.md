@@ -19,7 +19,7 @@ pip install -r requirements.txt
 Install standford corenlp: https://stanfordnlp.github.io/CoreNLP/
 
 ## Datasets
-You can download MS Marco v1.1 dataset here: 
+You can download MS Marco v2.1 dataset here: 
 https://microsoft.github.io/msmarco/. Put all the files into a data directory.
 
 Now preprocess the datasets:
@@ -80,7 +80,7 @@ python select_best_passage.py \
 This will generate a file named as `dev_from_self_ranker.jsonl`.
 
 
-> The following scripts shows the experiments on NLG subset, for QA subset, you just need to change argument `task` or `task_name` to "qa".
+> The following scripts run the experiments on NLG subset, for QA subset, you just need to change argument `task` or `task_name` from "nlg" to "qa".
 ## Syntactic multi-span answer annotator
 Now we need to transform the original answers in the training set to annotated spans.
 
